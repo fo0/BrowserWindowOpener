@@ -5,8 +5,8 @@
 	<groupId>com.fo0.vaadin.browserwindowopener.main</groupId>
 	<artifactId>BrowserWindowOpener</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>MyComponent Add-on</name>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>BrowserWindowOpener Add-on</name>
 
 	<prerequisites>
 		<maven>3</maven>
@@ -110,6 +110,7 @@
 							<!-- Package format version - do not change -->
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
 							<Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
+							<Vaadin-Widgetsets>com.fo0.vaadin.browserwindowopener.main.BrowserWindowOpener.WidgetSet</Vaadin-Widgetsets>
 						</manifestEntries>
 					</archive>
 				</configuration>

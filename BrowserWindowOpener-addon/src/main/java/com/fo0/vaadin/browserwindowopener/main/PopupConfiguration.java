@@ -10,7 +10,7 @@ import lombok.Data;
 
 /**
  * Documentation on:
- * {@link https://vaadin.com/docs/framework/advanced/advanced-windows.html} <br>
+ * https://vaadin.com/docs/framework/advanced/advanced-windows.html <br>
  * <br>
  * status=0|1 <br>
  * Whether the status bar at the bottom of the window should be enabled.<br>

@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.fo0.vaadin.browserwindowopener.main</groupId>
-	<artifactId>BrowserWindowOpener</artifactId>
+	<groupId>com.fo0.vaadin.browserwindowopener</groupId>
+	<artifactId>BrowserWindowOpener-root</artifactId>
 	<packaging>pom</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>MyComponent Add-on Root Project</name>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>BrowserWindowOpener</name>
 
 	<prerequisites>
 		<maven>3</maven>
@@ -17,6 +17,11 @@
 		<module>BrowserWindowOpener-demo</module>
 	</modules>
 
+	<organization>
+		<name>fo0systems</name>
+		<url>http://fo0systems.net</url>
+	</organization>
+
 	<profiles>
 		<profile>
 			<!-- Vaadin pre-release repositories -->
@@ -24,7 +29,7 @@
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
-			
+
 			<repositories>
 				<repository>
 					<id>vaadin-prereleases</id>
