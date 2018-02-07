@@ -1,22 +1,41 @@
-# MyComponent Add-on for Vaadin 8
+# BrowserWindowOpener Add-on for Vaadin 8
 
-${ComponentClassName} is a UI component add-on for Vaadin 8.
+BrowserWindowOpener is a UI component add-on for Vaadin 8.
 
 ## Online demo
 
-Try the add-on demo at <url of the online demo>
+http://fo0.me:8080/BrowserWindowOpener
+
+
+## Getting started
+
+### Maven Integration
+For latest dependency:
+````
+<dependency>
+	<groupId>com.fo0.vaadin.BrowserWindowOpener</groupId>
+	<artifactId>BrowserWindowOpener</artifactId>
+	<version>[0.0.1, )</version>
+</dependency>
+````
+### Sample
+````
+BrowserWindowOpener tokenField = new BrowserWindowOpener();
+````
+
+Check demo...
 
 ## Download release
 
-Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to http://vaadin.com/addon/BrowserWindowOpener
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to https://vaadin.com/directory/component/BrowserWindowOpener-addon
 
 ## Building and running demo
-
-git clone <url of the MyComponent repository>
+````
+git clone <url of the BrowserWindowOpener repository>
 mvn clean install
 cd demo
 mvn jetty:run
-
+````
 To see the demo, navigate to http://localhost:8080/
 
 ## Development with Eclipse IDE
@@ -36,30 +55,19 @@ Note that Eclipse may give "Plugin execution not covered by lifecycle configurat
 
 ### Debugging server-side
 
-If you have not already compiled the widgetset, do it now by running vaadin:install Maven target for BrowserWindowOpener-root project.
+If you have not already compiled the widgetset, do it now by running vaadin:install Maven target for AdvancedTokenField-root project.
 
-If you have a JRebel license, it makes on the fly code changes faster. Just add JRebel nature to your BrowserWindowOpener-demo project by clicking project with right mouse button and choosing JRebel > Add JRebel Nature
+If you have a JRebel license, it makes on the fly code changes faster. Just add JRebel nature to your AdvancedTokenField-demo project by clicking project with right mouse button and choosing JRebel > Add JRebel Nature
 
-To debug project and make code modifications on the fly in the server-side, right-click the BrowserWindowOpener-demo project and choose Debug As > Debug on Server. Navigate to http://localhost:8080/BrowserWindowOpener-demo/ to see the application.
+To debug project and make code modifications on the fly in the server-side, right-click the AdvancedTokenField-demo project and choose Debug As > Debug on Server. Navigate to http://localhost:8080/AdvancedTokenField-demo/ to see the application.
 
 ### Debugging client-side
 
-Debugging client side code in the BrowserWindowOpener-demo project:
+Debugging client side code in the AdvancedTokenField-demo project:
   - run "mvn vaadin:run-codeserver" on a separate console while the application is running
   - activate Super Dev Mode in the debug window of the application or by adding ?superdevmode to the URL
   - You can access Java-sources and set breakpoints inside Chrome if you enable source maps from inspector settings.
  
-## Release notes
-
-### Version 1.0-SNAPSHOT
-- ...
-- ...
-
-## Roadmap
-
-This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
-- ...
-- ...
 
 ## Issue tracking
 
@@ -77,34 +85,6 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 ## License & Author
 
-Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
+Add-on is distributed under Apache License 2.0 for Vaadin and MIT for my addon . For license terms, see LICENSE.txt.
 
-MyComponent is written by <...>
-
-# Developer Guide
-
-## Getting started
-
-Here is a simple example on how to try out the add-on component:
-
-<...>
-
-For a more comprehensive example, see src/test/java/org/vaadin/template/demo/DemoUI.java
-
-## Features
-
-### Feature A
-
-<...>
-
-### Feature B
-
-<...>
-
-### Feature C
-
-<...>
-
-## API
-
-MyComponent JavaDoc is available online at <...>
+BrowserWindowOpener is written by fo0
