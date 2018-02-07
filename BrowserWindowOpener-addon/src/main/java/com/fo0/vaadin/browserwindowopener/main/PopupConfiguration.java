@@ -1,12 +1,18 @@
 package com.fo0.vaadin.browserwindowopener.main;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
+import com.vaadin.server.Resource;
+import com.vaadin.ui.UI;
+
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * Documentation on:
@@ -42,6 +48,7 @@ import lombok.Data;
  *
  */
 @Data
+@EqualsAndHashCode(of = { "id" })
 @Builder
 public class PopupConfiguration {
 
@@ -59,6 +66,13 @@ public class PopupConfiguration {
 	private boolean menubar;
 	private boolean location;
 	private boolean toolbar;
+
+	private String customFeatures;
+
+	@Builder.Default
+	private Map<String, String> params = new HashMap<String, String>();
+
+	private Class<? extends UI> clazz;
 
 	protected List<String> getConfig() {
 		try {
@@ -79,12 +93,22 @@ public class PopupConfiguration {
 			if (toolbar)
 				list.add("toolbar");
 
+			if (customFeatures != null && !customFeatures.isEmpty())
+				list.add(customFeatures);
+
 			return list;
 		} catch (Exception e) {
 			System.err.println("failed to generate popup configuration " + e);
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public void addParam(String key, String value) {
+		if (params == null)
+			params = new HashMap<String, String>();
+
+		params.put(key, value);
 	}
 
 }
