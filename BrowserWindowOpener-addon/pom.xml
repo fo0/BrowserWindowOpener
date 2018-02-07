@@ -5,7 +5,7 @@
 	<groupId>com.fo0.vaadin.browserwindowopener</groupId>
 	<artifactId>BrowserWindowOpener</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.4</version>
+	<version>1.0.6-SNAPSHOT</version>
 	<name>BrowserWindowOpener Add-on</name>
 
 	<prerequisites>

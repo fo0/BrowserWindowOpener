@@ -104,11 +104,12 @@ public class PopupConfiguration {
 		return null;
 	}
 
-	public void addParam(String key, String value) {
+	public PopupConfiguration addParam(String key, String value) {
 		if (params == null)
 			params = new HashMap<String, String>();
 
 		params.put(key, value);
+		return this;
 	}
 
 }

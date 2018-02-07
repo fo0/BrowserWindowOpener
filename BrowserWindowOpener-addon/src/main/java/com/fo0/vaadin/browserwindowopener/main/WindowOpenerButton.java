@@ -51,6 +51,7 @@ public class WindowOpenerButton extends MButton {
 				VaadinSession.getCurrent().setAttribute(config.getId(), null);
 			}
 		});
+		click();
 	}
 
 	public WindowOpenerButton(PopupConfiguration config, Layout layout) {

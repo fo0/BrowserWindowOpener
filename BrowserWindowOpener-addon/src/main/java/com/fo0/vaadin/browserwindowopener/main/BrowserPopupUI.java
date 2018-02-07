@@ -20,7 +20,7 @@ public class BrowserPopupUI extends UI {
 	@Override
 	protected void init(VaadinRequest request) {
 		// fetch id from path
-		Map<String, String[]> params = getURIParameters();
+		Map<String, String[]> params = getParams();
 
 		String id = StringUtils.join(params.get("id"), "-");
 
@@ -37,19 +37,12 @@ public class BrowserPopupUI extends UI {
 		VaadinSession.getCurrent().setAttribute(id, null);
 	}
 
-	private static Map<String, String[]> getURIParameters() {
-		return VaadinService.getCurrentRequest().getParameterMap();
+	public String getParams(String key) {
+		return VaadinService.getCurrentRequest().getParameter(key);
+	}
 
-		// String params = VaadinService.getCurrentRequest().getPathInfo();
-		// if (params != null) {
-		// String[] msgs = params.split("/");
-		// if (msgs.length > 0) {
-		// return (List<String>) Arrays.asList(msgs);
-		// } else {
-		// return null;
-		// }
-		// }
-		// return null;
+	public Map<String, String[]> getParams() {
+		return VaadinService.getCurrentRequest().getParameterMap();
 	}
 
 	private void log(String log) {
